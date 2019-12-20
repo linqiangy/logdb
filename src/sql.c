@@ -169,7 +169,7 @@ static int get_column_def(char *des, size_t n, struct column *target)
     }
     else if (target->type >= COLUMN_TYPE_DATE && target->type <= COLUMN_TYPE_DATETIME)
     {
-        len += snprintf(des + len, n - len, " NOT NULL DEFAULT 0");
+        len += snprintf(des + len, n - len, " NOT NULL DEFAULT '1000-01-01 00:00:00'");
     }
     /* TEXT and BLOB don't have default value */
 
